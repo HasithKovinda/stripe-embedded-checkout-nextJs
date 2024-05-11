@@ -1,14 +1,17 @@
 import Link from "next/link";
+import Image from "next/image";
 
-function page() {
+function SuccessPage() {
   return (
     <main className="max-w-screen-xl mx-auto mt-5">
       <div className="flex flex-col justify-center items-center">
         <div>
-          <img
+          <Image
             src="/success.jpg"
             className="h-96 w-96"
             alt="payment success fully done"
+            height={384}
+            width={384}
           />
         </div>
         <h3 className="text-3xl font-semibold mt-5 text-center">
@@ -29,4 +32,4 @@ function page() {
   );
 }
 
-export default page;
+export default SuccessPage;

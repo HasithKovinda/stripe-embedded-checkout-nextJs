@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./TourRating.module.css";
 
 type TourRatingProp = {
@@ -17,7 +18,13 @@ export default function Rating({ ratingNumber }: TourRatingProp) {
           return (
             <div className="review-container" key={i}>
               <div className="progress" style={{ width: `30px` }}></div>
-              <img src="/download.png" className="icon" />
+              <Image
+                src="/download.png"
+                className="icon"
+                alt="rating"
+                height={30}
+                width={30}
+              />
             </div>
           );
         } else {
@@ -30,7 +37,13 @@ export default function Rating({ ratingNumber }: TourRatingProp) {
                     ratingNumber + gap === i + 1 ? `${applyWith}px` : `0px`,
                 }}
               ></div>
-              <img src="/download.png" className="icon" />
+              <Image
+                src="/download.png"
+                className="icon"
+                alt="rating"
+                height={30}
+                width={30}
+              />
             </div>
           );
         }
