@@ -7,6 +7,7 @@ export default async function page() {
     <main>
       <header className="mt-4">
         <h1 className="text-center  text-7xl font-semibold">Product Store</h1>
+        <div className="h-3 w-36 bg-primary mx-auto"></div>
       </header>
       <main>
         <Products products={products} />
