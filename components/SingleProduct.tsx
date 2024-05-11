@@ -2,7 +2,14 @@ import { Product } from "@/lib/server";
 import Rating from "./Rating";
 import PayButton from "./PayButton";
 
-function SingleProduct({ title, description, image, rating, price }: Product) {
+function SingleProduct({
+  id,
+  title,
+  description,
+  image,
+  rating,
+  price,
+}: Product) {
   return (
     <article className="mt-10 rounded-xl max-w-md px-5  border-zinc-100 border-2 mb-10 shadow-lg">
       <div className="flex items-center justify-center">
@@ -28,7 +35,7 @@ function SingleProduct({ title, description, image, rating, price }: Product) {
         <span>({rating.count} Reviews)</span>
       </div>
       <div className="flex justify-center mt-2 mb-2">
-        <PayButton />
+        <PayButton id={id} />
       </div>
     </article>
   );

@@ -1,11 +1,11 @@
 "use client";
 import { useRouter } from "next/navigation";
 
-function PayButton() {
+function PayButton({ id }: { id: string }) {
   const router = useRouter();
 
   async function createCheckout() {
-    router.push("/payment");
+    router.push(`/payment?productId=${id}`);
   }
   return (
     <button
