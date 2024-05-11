@@ -11,10 +11,10 @@ function page() {
             alt="payment success fully done"
           />
         </div>
-        <h3 className="text-3xl font-semibold mt-5">
+        <h3 className="text-3xl font-semibold mt-5 text-center">
           Thank You For Your Purchasing !
         </h3>
-        <p className="text-lg text-slate-400 mb-5">
+        <p className="text-lg text-slate-400 mb-5 text-center">
           You have successfully purchase your product.We wil send you an email
           about purchase invoice.
         </p>
