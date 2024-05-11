@@ -3,7 +3,7 @@ import SingleProduct from "./SingleProduct";
 
 function Products({ products }: { products: Product[] }) {
   return (
-    <div className="flex items-start justify-between gap-4 flex-wrap p-4">
+    <div className="p-4 flex flex-col items-center lg:flex-row lg:items-start lg:justify-between lg:gap-4 lg:flex-wrap">
       {products.map((product) => {
         const { id, title, description, image, rating, price } = product;
         return (
