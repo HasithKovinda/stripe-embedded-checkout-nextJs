@@ -7,3 +7,31 @@
     text-wrap: balance;
   }
 }
+
+.section {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.review-container {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  margin-right: 1px;
+  background: var(--color-dark);
+  overflow: hidden;
+}
+
+.progress {
+  height: 20px;
+  background: #fdbc4b;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
