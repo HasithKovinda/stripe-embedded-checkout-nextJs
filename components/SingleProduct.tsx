@@ -1,5 +1,6 @@
 import { Product } from "@/lib/server";
 import Rating from "./Rating";
+import PayButton from "./PayButton";
 
 function SingleProduct({ title, description, image, rating, price }: Product) {
   return (
@@ -27,9 +28,7 @@ function SingleProduct({ title, description, image, rating, price }: Product) {
         <span>({rating.count} Reviews)</span>
       </div>
       <div className="flex justify-center mt-2 mb-2">
-        <button className="bg-primary text-white px-4 py-2 text-2xl font-semibold hover:bg-secondary transition-all duration-200">
-          Purchase Now
-        </button>
+        <PayButton />
       </div>
     </article>
   );
