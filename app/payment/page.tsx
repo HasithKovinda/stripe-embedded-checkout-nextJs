@@ -6,9 +6,9 @@ import {
   EmbeddedCheckoutProvider,
 } from "@stripe/react-stripe-js";
 import { createStripeCheckout, getSingleProduct } from "@/lib/server";
+import Link from "next/link";
 
-const public_key =
-  "pk_test_51PFFmiLUi4x87ljAs2ciDoP6QHM2GAhvHCLJ7QHsXpvJuTJorPqMthNRDpKzYwcSrC62VWgvFyaBsPGm9czFnMih00Po9h5nYE";
+const public_key = process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY;
 
 function Page() {
   const searchParams = useSearchParams();
@@ -32,9 +32,12 @@ function Page() {
   }
   const option = { fetchClientSecret };
 
-  const stripe = loadStripe(public_key);
+  const stripe = loadStripe(public_key!);
   return (
     <main className="p-5">
+      <Link href="/" className="text-primary text-2xl font-semibold">
+        &larr; Back Product Page
+      </Link>
       <EmbeddedCheckoutProvider stripe={stripe} options={option}>
         <EmbeddedCheckout />
       </EmbeddedCheckoutProvider>
