@@ -44,8 +44,7 @@ export async function createStripeCheckout(payLoad: PayLoad): Promise<string> {
         quantity: 1,
       },
     ],
-    return_url:
-      "http://localhost:3000/success?session_id={CHECKOUT_SESSION_ID}",
+    return_url: "http://localhost:3000/success",
   };
   const { client_secret }: Stripe.Checkout.Session =
     await stripe.checkout.sessions.create(params);
